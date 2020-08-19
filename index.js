@@ -47,19 +47,51 @@ const questions = [
         validate: validateTheResponse
     },
     {
+        type: "input",
+        message: "Enter Installation proceedure",
+        name: "install",
+        validate: validateTheResponse
+    },
+    {
+        type: "input",
+        message: "Enter how to use",
+        name: "usage",
+        validate: validateTheResponse
+    },
+    {
+        type: "list",
+        message: "Choose the licence",
+        name: "license",
+        choices: ['MIT', 'ISC', 'GNU']
+        // filter: val => {
+        //     if (val === MIT) {
+        //         return ''
+        //     }
+        // }
+    },
+    {
         message: "What are the tests used? (List them comma seperated)",
         name: "tests"
     },
     {
         type: "input",
+        message: "Enter author's name",
+        name: "author",
+        validate: validateTheResponse
+
+    },
+    {
+        type: "input",
         message: "Enter your GitHub username",
-        name: "gitUserName"
+        name: "gitUserName",
+        validate: validateTheResponse
 
     },
     {
         type: "input",
         message: "Enter your emial",
-        name: "email"
+        name: "email",
+        validate: validateTheResponse
     }
 ];
 
@@ -89,6 +121,7 @@ function init() {
     inquirer.prompt(questions).then((answers) => {
         console.log(answers.title);
         console.log(answers.description);
+        console.log(answers.license);
         console.log(answers.tests);
         console.log(answers.gitUserName);
         writeToFile(filename, answers);

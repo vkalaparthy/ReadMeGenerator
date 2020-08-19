@@ -19,15 +19,19 @@ ${data.description}
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
+${data.install}
 ## Usage
+${data.usage}
 ## License
-Copyright © 2020-present, . Released under the MIT License.
+${data.license}
+Copyright © 2020-present, ${data.author}. Released under the MIT License.
 ## Contributing
 ## Tests
 ${data.tests}
 ## Questions
-* https://github.com/${data.gitUserName}
-* ${data.email}
+${data.author}
+  * https://github.com/${data.gitUserName}
+  * ${data.email}
     `;
   }
 }

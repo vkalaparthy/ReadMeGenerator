@@ -1,6 +1,6 @@
-# Project Title
+# REAMME Generator
 ## Description
-Provide descrption for the Project
+This will generate a README.md based on user provided answers
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -9,13 +9,17 @@ Provide descrption for the Project
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
+Clone the GitHub repository and Install the packages needed by running npm install, you will see node_modules created.
 ## Usage
+node index.js in the local Integrated Terminal and answer all the questions
 ## License
-Copyright © 2020-present, . Released under the MIT License.
+MIT
+Copyright © 2020-present, Vani Kalaparthy. Released under the MIT License.
 ## Contributing
 ## Tests
 Test1, Test2
 ## Questions
-* https://github.com/vkalaparthy
-* kalaparthy.vani@gmail.com
+Vani Kalaparthy
+  * https://github.com/vkalaparthy
+  * kalaparthy.vani@gmail.com
     
