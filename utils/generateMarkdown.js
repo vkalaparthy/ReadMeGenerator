@@ -20,7 +20,8 @@ module.exports = {
       licenseText = 'Copyright (c)' + '2020, ' + data.author;
     }
 
-    return `# ${data.title}
+    return `
+# ${data.title}
 ${getLicense}
 ## Description
 ${data.description}
