@@ -62,7 +62,7 @@ const questions = [
         type: "list",
         message: "Choose the licence",
         name: "license",
-        choices: ['MIT', 'ISC', 'GNU']
+        choices: ['MIT', 'ISC']
         // filter: val => {
         //     if (val === MIT) {
         //         return ''

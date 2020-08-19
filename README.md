@@ -1,4 +1,5 @@
-# REAMME Generator
+# README Generator
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 This will generate a README.md based on user provided answers
 ## Table of Contents
@@ -11,7 +12,7 @@ This will generate a README.md based on user provided answers
 ## Installation
 Clone the GitHub repository and Install the packages needed by running npm install, you will see node_modules created.
 ## Usage
-node index.js in the local Integrated Terminal and answer all the questions
+Open an integrated terminal and run "node index.js" at the promt and answer all the questions
 ## License
 MIT
 Copyright © 2020-present, Vani Kalaparthy. Released under the MIT License.

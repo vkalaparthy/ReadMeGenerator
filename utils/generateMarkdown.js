@@ -8,7 +8,14 @@
 module.exports = {
   generateMarkdown: function(data) {
     //const techs = (data.tech).split(",").trim();
+    let getLicense;
+    if(data.license === "MIT")
+      //getLicence = "/hexpm/l/:packageName";
+      getLicense = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    else if (data.license === "ISC")
+      getLicense = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
     return `# ${data.title}
+${getLicense}
 ## Description
 ${data.description}
 ## Table of Contents
