@@ -17,7 +17,7 @@ module.exports = {
     }
     else if (data.license === "ISC") {
       getLicense = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
-      licenseText = 'Copyright (c)' + '2020, ' + data.author;
+      licenseText = 'Copyright (c) ' + '2020, ' + data.author;
     }
 
     return `
