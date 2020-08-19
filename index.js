@@ -24,18 +24,27 @@ var generateMD = require("./utils/generateMarkdown")
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README
 
+const validateTheResponse = async (input) => {
+    if (input === "") {
+       return 'Incorrect response!!';
+    }
+
+    return true;
+ }
+
 // array of questions for user
 const questions = [
     {
         type: "input",
         message: "Enter the title of your project",
-        name: "title"
+        name: "title",
+        validate: validateTheResponse
     },
     {
         type: "input",
         message: "Enter descrption of your project",
-        name: "description"
-
+        name: "description",
+        validate: validateTheResponse
     },
     {
         message: "What are the tests used? (List them comma seperated)",
@@ -54,7 +63,8 @@ const questions = [
     }
 ];
 
-// // function to write README file
+
+// function to write README file
 var filename = "README.md";
 
 function writeToFile(filename, data) {
@@ -82,7 +92,7 @@ function init() {
         console.log(answers.tests);
         console.log(answers.gitUserName);
         writeToFile(filename, answers);
-      });
+    });
 };
 
 // // function call to initialize program

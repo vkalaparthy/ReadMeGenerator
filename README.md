@@ -1,6 +1,6 @@
-# ProjectTitle
+# Project Title
 ## Description
-Here comes the descrption of the project and it can be as long as you want it to be
+Provide descrption for the Project
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -14,7 +14,7 @@ Here comes the descrption of the project and it can be as long as you want it to
 Copyright © 2020-present, . Released under the MIT License.
 ## Contributing
 ## Tests
-Test1, Test2, Test3
+Test1, Test2
 ## Questions
 * https://github.com/vkalaparthy
 * kalaparthy.vani@gmail.com
