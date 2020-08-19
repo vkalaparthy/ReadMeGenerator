@@ -7,13 +7,19 @@
 
 module.exports = {
   generateMarkdown: function(data) {
-    //const techs = (data.tech).split(",").trim();
-    let getLicense;
-    if(data.license === "MIT")
+  
+    let getLicense = "";
+    let licenseText = "";
+    if(data.license === "MIT") {
       //getLicence = "/hexpm/l/:packageName";
       getLicense = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-    else if (data.license === "ISC")
-      getLicense = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
+      licenseText = 'Copyright © 2020-present, ' + data.author + '. Released under the MIT License.';
+    }
+    else if (data.license === "ISC") {
+      getLicense = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+      licenseText = 'Copyright (c)' + '2020, ' + data.author;
+    }
+
     return `# ${data.title}
 ${getLicense}
 ## Description
@@ -30,13 +36,12 @@ ${data.install}
 ## Usage
 ${data.usage}
 ## License
-${data.license}
-Copyright © 2020-present, ${data.author}. Released under the MIT License.
+${licenseText}
 ## Contributing
 ## Tests
 ${data.tests}
 ## Questions
-${data.author}
+* ${data.author}
   * https://github.com/${data.gitUserName}
   * ${data.email}
     `;
