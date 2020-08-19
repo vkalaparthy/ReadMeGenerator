@@ -1,6 +1,16 @@
-# testProject
+// function to generate markdown for README
+// function generateMarkdown(data) {
+//   return `# ${data.title}
+
+// `;
+// }
+
+module.exports = {
+  generateMarkdown: function(data) {
+    //const techs = (data.tech).split(",").trim();
+    return `# ${data.title}
       ## Description
-      some description
+      ${data.description}
       ## Table of Contents
       * [Installation](#installation)
       * [Usage](#usage)
@@ -14,8 +24,10 @@
       Copyright © 2020-present, . Released under the MIT License.
       ## Contributing
       ## Tests
-      test1, test2
+      ${data.tests}
       ## Questions
-      * https://github.com/vkalaparthy
-      * vani@gmail.com
-    
+      * https://github.com/${data.gitUserName}
+      * ${data.email}
+    `;
+  }
+}
