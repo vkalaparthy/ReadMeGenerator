@@ -15,7 +15,7 @@ Clone the GitHub repository and Install the packages needed by running npm insta
 ## Usage
 Open an integrated terminal and run "node index.js" at the promt and answer all the questions
 ## License
-Copyright (c)2020, Vani Kalaparthy
+Copyright (c) 2020, Vani Kalaparthy
 ## Contributing
 ## Tests
 Test1, Test2
