@@ -16,7 +16,7 @@ const licenseText = (value, name) => {
 }
 
 module.exports = {
-  generateMarkdown: function(data) {
+  generateMarkdown: data => {
 
     return `
 # ${data.title}
