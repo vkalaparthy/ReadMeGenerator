@@ -1,23 +1,26 @@
 // function to generate markdown for README
 
+const getLicense = value => {
+  if (value === "MIT")
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+  else if (value === "ISC")
+    return '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+};
+
+
+const licenseText = (value, name) => {
+  if(value === "MIT") 
+    return 'Copyright © 2020-present, ' + name + '. Released under the MIT License.';
+  else if (value === "ISC")
+    return 'Copyright (c) 2020, ' + name;
+}
+
 module.exports = {
   generateMarkdown: function(data) {
-  
-    let getLicense = "";
-    let licenseText = "";
-    if(data.license === "MIT") {
-      //getLicence = "/hexpm/l/:packageName";
-      getLicense = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-      licenseText = 'Copyright © 2020-present, ' + data.author + '. Released under the MIT License.';
-    }
-    else if (data.license === "ISC") {
-      getLicense = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
-      licenseText = 'Copyright (c) ' + '2020, ' + data.author;
-    }
 
     return `
 # ${data.title}
-${getLicense}
+${getLicense(data.license)}
 ## Description
 ${data.description}
 ## Table of Contents
@@ -32,7 +35,7 @@ ${data.install}
 ## Usage
 ${data.usage}
 ## License
-${licenseText}
+${licenseText(data.license, data.author)}
 ## Contributing
 ## Tests
 ${data.tests}
