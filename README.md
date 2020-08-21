@@ -1,6 +1,6 @@
 
 # README Generator
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ## Description
 This will generate a README.md based on user provided answers using Node.js,  JavaScript runtime environment using fs module, npm-inquirer and npm-util
 ## Table of Contents
@@ -15,10 +15,10 @@ Clone the GitHub repository and Install the packages needed by running npm insta
 ## Usage
 Open an integrated terminal and run "node index.js" at the promt and answer all the questions for a README.md to be generated
 ## License
-Copyright © 2020-present, Vani Kalaparthy. Released under the MIT License.
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
 ## Contributing
 ## Tests
-Test1, Test2
+
 ## Questions
 * Vani Kalaparthy
   * https://github.com/vkalaparthy
