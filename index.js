@@ -40,13 +40,19 @@ const questions = [
         validate: validateTheResponse
     },
     {
+        type: "input",
+        message: "Enter relative path of image to add (ex: ./images/screenshot.jpg)",
+        name: "image"
+    },
+    {
         type: "list",
         message: "Choose the licence",
         name: "license",
         choices: ['MIT', 'ISC', 'GNU', "No Licence"]
     },
     {
-        message: "What are the tests used? (List them comma seperated)",
+        type: "input",
+        message: "Enter a test script that was used for testing",
         name: "tests"
     },
     {
@@ -87,11 +93,12 @@ async function writeToFile(data) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        // console.log(answers.title);
+        //  console.log(answers.title);
         // console.log(answers.description);
         // console.log(answers.license);
         // console.log(answers.tests);
         // console.log(answers.gitUserName);
+        // console.log(answers.image);
         writeToFile(answers);
     });
 };

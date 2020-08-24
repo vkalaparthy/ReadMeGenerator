@@ -23,15 +23,16 @@ const licenseText = (value, name) => {
       return 'Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>';
     default:
       return "";
-
   }
 };
 
-// const listTests = tests => {
-//   //const tests = ["test1", "test2"];
-//   // check if there is a , 
-//   //console.log(tests.split(",")+"\n");
-// }
+const addImage = image => {
+  if (image !== "") {
+    return `![Image of image](${image})`;
+  }
+  else 
+    return "";
+}
 
 module.exports = {
   generateMarkdown: data => {
@@ -52,6 +53,7 @@ ${data.description}
 ${data.install}
 ## Usage
 ${data.usage}
+${addImage(data.image)}
 ## License
 ${licenseText(data.license, data.author)}
 ## Contributing
